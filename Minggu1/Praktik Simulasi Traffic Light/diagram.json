@@ -1,0 +1,40 @@
+{
+    "version": 1,
+    "author": "Pradipta Rahmatan Isya Hertanto",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": -61.2,
+        "left": 234.2,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led2",
+        "top": 82.8,
+        "left": 253.4,
+        "attrs": { "color": "yellow" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led3",
+        "top": 121.2,
+        "left": 330.2,
+        "attrs": { "color": "limegreen" }
+      }
+    ],
+    "connections": [
+      [ "esp:TX", "$serialMonitor:RX", "", [] ],
+      [ "esp:RX", "$serialMonitor:TX", "", [] ],
+      [ "led1:C", "esp:GND.2", "green", [ "v0" ] ],
+      [ "led2:C", "esp:GND.2", "green", [ "v0", "h-18.8", "v-96" ] ],
+      [ "led3:C", "esp:GND.2", "green", [ "v0", "h-18.8", "v-201.6" ] ],
+      [ "led1:A", "esp:21", "green", [ "v0" ] ],
+      [ "led2:A", "esp:16", "green", [ "v0" ] ],
+      [ "led3:A", "esp:15", "green", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
